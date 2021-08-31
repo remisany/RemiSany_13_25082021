@@ -1,8 +1,13 @@
 //React
-import { Component, Fragment } from "react"
+import { Fragment } from "react"
+import { useDispatch } from 'react-redux'
 
 //Styled components
 import styled from "styled-components"
+
+//Features
+import { setIdentifiers } from '../features/SignIn'
+
 
 const WRAPPER = styled.div`
     display: flex;
@@ -28,28 +33,26 @@ const REMEMBER = styled.div`
     }
 `
 
-class Input extends Component {
-    render () {
+function Input ({ type, id }) {
+    const label = (id[0].toUpperCase() + id.slice(1)).replace("-", " ")
 
-        const { type, id } = this.props
-        const label = (id[0].toUpperCase() + id.slice(1)).replace("-", " ")
+    const dispatch = useDispatch()
 
-        return (
-            <Fragment>
-                {type !== "checkbox" ?
-                    <WRAPPER>
-                        <label>{label}</label>
-                        <input type = {type} id = {id}/>
-                    </WRAPPER>
-                :
-                    <REMEMBER>
-                        <input type = {type} id = {id}/>
-                        <label>{label}</label>
-                    </REMEMBER>
-                }
-            </Fragment>
-        )
-    }
+    return (
+        <Fragment>
+            {type !== "checkbox" ?
+                <WRAPPER>
+                    <label>{label}</label>
+                    <input type = {type} id = {id} onChange={(e) => dispatch(setIdentifiers(e))}/>
+                </WRAPPER>
+            :
+                <REMEMBER>
+                    <input type = {type} id = {id}/>
+                    <label>{label}</label>
+                </REMEMBER>
+            }
+        </Fragment>
+    )
 }
 
 export default Input
