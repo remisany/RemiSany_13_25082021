@@ -1,6 +1,3 @@
-//React
-import { Component } from "react"
-
 //Styled components
 import styled from "styled-components"
 
@@ -23,19 +20,14 @@ const TITLE = styled.h3`
     margin-bottom: 0.5rem;
 `
 
-class Feature extends Component {
-    render () {
-
-        const { icon, alt, title, content} = this.props
-
-        return (
-            <ITEM>
-                <ICON src = {icon} alt = {alt}/>
-                <TITLE>{title}</TITLE>
-                <p>{content}</p>
-            </ITEM>
-        )
-    }
+function Feature ({ icon, alt, title, content }) {
+    return (
+        <ITEM>
+            <ICON src = {icon} alt = {alt}/>
+            <TITLE>{title}</TITLE>
+            <p>{content}</p>
+        </ITEM>
+    )
 }
 
 export default Feature

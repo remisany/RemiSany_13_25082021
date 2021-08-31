@@ -1,6 +1,3 @@
-//React
-import { Component } from "react"
-
 //Styled components
 import styled from "styled-components"
 
@@ -58,19 +55,17 @@ const TEXT = styled.p`
     }
 `
 
-class Hero extends Component {
-    render () {
-        return (
-            <HERO>
-                <HERO_CONTENT>
-                    <SUBTITLE>No fees.</SUBTITLE>
-                    <SUBTITLE>No minimum deposit.</SUBTITLE>
-                    <SUBTITLE>High interest rates.</SUBTITLE>
-                    <TEXT>Open a savings account with Argent Bank today!</TEXT>
-                </HERO_CONTENT>
-            </HERO>
-        )
-    }
+function Hero () {
+    return (
+        <HERO>
+            <HERO_CONTENT>
+                <SUBTITLE>No fees.</SUBTITLE>
+                <SUBTITLE>No minimum deposit.</SUBTITLE>
+                <SUBTITLE>High interest rates.</SUBTITLE>
+                <TEXT>Open a savings account with Argent Bank today!</TEXT>
+            </HERO_CONTENT>
+        </HERO>
+    )
 }
 
 export default Hero
