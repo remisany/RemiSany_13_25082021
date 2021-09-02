@@ -1,13 +1,9 @@
-//React
 import { Fragment } from "react"
 import { useDispatch } from 'react-redux'
-
-//Styled components
 import styled from "styled-components"
 
 //Features
-import { setIdentifiers } from '../features/SignIn'
-
+import { identifiers, remember } from '../features/SignIn'
 
 const WRAPPER = styled.div`
     display: flex;
@@ -43,11 +39,11 @@ function Input ({ type, id }) {
             {type !== "checkbox" ?
                 <WRAPPER>
                     <label>{label}</label>
-                    <input type = {type} id = {id} onChange={(e) => dispatch(setIdentifiers(e))}/>
+                    <input type = {type} id = {id} onChange={(e) => dispatch(identifiers(e, type))}/>
                 </WRAPPER>
             :
                 <REMEMBER>
-                    <input type = {type} id = {id}/>
+                    <input type = {type} id = {id} onChange={() => dispatch(remember())}/>
                     <label>{label}</label>
                 </REMEMBER>
             }
