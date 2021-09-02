@@ -3,9 +3,13 @@ import { combineReducers, createStore } from "redux"
 
 //Reducers
 import signInReducer from "../features/SignIn"
+import logInReducer from "../features/LogIn"
+import profileReducer from "../features/Profile"
 
 const reducer = combineReducers({
-    signIn: signInReducer
+    signIn: signInReducer,
+    logIn: logInReducer,
+    profile: profileReducer,
 })
 
 const reduxDevtools =
