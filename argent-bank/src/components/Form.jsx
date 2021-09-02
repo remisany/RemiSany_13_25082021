@@ -5,13 +5,13 @@ import styled from "styled-components"
 import axios from "axios"
 
 //Components
-import Input from "./Input"
+import InputSignin from "./InputSignin"
 
 //Features
 import { valid } from '../features/LogIn'
 
 //Selectors
-import { selectToken } from "../utils/selectors"
+import { selectToken, selectEmail, selectPassword } from "../utils/selectors"
 
 const BUTTON = styled.button`
     display: block;
@@ -36,6 +36,8 @@ function Form () {
     const store = useStore()
     const dispatch = useDispatch()
     const token = useSelector(selectToken)
+    const email = useSelector(selectEmail)
+    const password = useSelector(selectPassword)
     const [errorMessage, setErrorMessage] = useState("")
     
     const login = (e) => {
@@ -60,15 +62,17 @@ function Form () {
             {token !=="" && <Redirect to = "/profile" />}
 
             <form onSubmit = {(e) => login(e)}>
-                <Input
+                <InputSignin
                     type = "text"
                     id = "username"
+                    value = {email}
                 />
-                <Input
+                <InputSignin
                     type = "password"
                     id = "password"
+                    value = {password}
                 />
-                <Input
+                <InputSignin
                     type = "checkbox"
                     id = "remember-me"
                 />

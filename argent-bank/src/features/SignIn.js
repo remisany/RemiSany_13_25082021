@@ -46,7 +46,11 @@ function reducer (state = initialState, action) {
     }
 
     if (action.type === SIGNIN_RESET) {
-        return initialState
+        if (state.remember) {
+            return state
+        } else {
+            return initialState
+        }
     }
 
     return state

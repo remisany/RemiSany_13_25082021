@@ -1,9 +1,12 @@
 import { Fragment } from "react"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import styled from "styled-components"
 
 //Features
-import { identifiers, remember } from '../features/SignIn'
+import { identifiers, remember} from '../features/SignIn'
+
+//Selectors
+import { selectChecked } from "../utils/selectors"
 
 const WRAPPER = styled.div`
     display: flex;
@@ -29,21 +32,22 @@ const REMEMBER = styled.div`
     }
 `
 
-function Input ({ type, id }) {
-    const label = (id[0].toUpperCase() + id.slice(1)).replace("-", " ")
-
+function InputSignin ({ type, id, value }) {
     const dispatch = useDispatch()
+    const checked = useSelector(selectChecked)
+
+    const label = (id[0].toUpperCase() + id.slice(1)).replace("-", " ")
 
     return (
         <Fragment>
             {type !== "checkbox" ?
                 <WRAPPER>
                     <label>{label}</label>
-                    <input type = {type} id = {id} onChange={(e) => dispatch(identifiers(e, type))}/>
+                    <input type = {type} id = {id} value = {value} onChange = {(e) => dispatch(identifiers(e, type))}/>
                 </WRAPPER>
             :
                 <REMEMBER>
-                    <input type = {type} id = {id} onChange={() => dispatch(remember())}/>
+                    <input type = {type} id = {id} checked = {checked} onChange = {() => dispatch(remember())}/>
                     <label>{label}</label>
                 </REMEMBER>
             }
@@ -51,4 +55,4 @@ function Input ({ type, id }) {
     )
 }
 
-export default Input
+export default InputSignin
