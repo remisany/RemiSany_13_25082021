@@ -9,8 +9,8 @@ import store from "./utils/store"
 
 //Pages
 import HomePage from "./pages/HomePage"
-import SignInPage from "./pages/SignInPage"
-import UserPage from "./pages/UserPage"
+import LoginPage from "./pages/LoginPage"
+import ProfilePage from "./pages/ProfilePage"
 
 //Components
 import Header from "./components/Header"
@@ -29,12 +29,12 @@ ReactDOM.render(
             <HomePage />
           </Route>
           <Route
-            path = "/sign-in">
-            <SignInPage />
+            path = "/login">
+            <LoginPage />
           </Route>
           <Route
-            path = "/user">
-            <UserPage />
+            path = "/profile">
+            <ProfilePage />
           </Route>
         </Switch>
         <Footer />
