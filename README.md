@@ -33,7 +33,7 @@
 
 <div id='Phase2'>
 
-## Phase 2 - Transactions (#){#Phase2}
+## Phase 2 - Transactions
 
 ### CONTEXTE
 
