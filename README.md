@@ -2,13 +2,13 @@
 
 ## Projet 13 "Utilisez une API pour un compte utilisateur bancaire avec React."
 
-1. [Phase 1 - Authentification de l'utilisateur](#Phase-1---Authentification-de-l'utilisateur)
-2. [Phase 2 - Transactions](#Phase-2-Transactions)
+1. [Phase 1 - Authentification de l'utilisateur](#Phase1)
+2. [Phase 2 - Transactions](#Phase2)
 3. [Installation (en)](#Installation)
 
 ***
 
-## Phase 1 - Authentification de l'utilisateur
+## Phase 1 : Authentification de l'utilisateur <a name="#Phase1"></a>
 
 ### CONTEXTE
 
@@ -29,7 +29,7 @@
 
 ***
 
-## Phase 2 - Transactions
+## Phase 2 - Transactions <a name="#Phase2"></a>
 
 ### CONTEXTE
 
