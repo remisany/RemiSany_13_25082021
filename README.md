@@ -2,9 +2,9 @@
 
 ## Projet 13 "Utilisez une API pour un compte utilisateur bancaire avec React."
 
-1. [Phase 1 - Authentification de l'utilisateur](#Phase-1)
-2. [Phase 2 - Transactions](#Phase-2)
-3. [Installation](#Installation)
+1. [Phase 1 - Authentification de l'utilisateur](#Phase-1-Authentification-de-l'utilisateur)
+2. [Phase 2 - Transactions](#Phase-2-Transactions)
+3. [Installation (en)](#Installation)
 
 ***
 
@@ -50,9 +50,11 @@
 - Javascript.
 - React.
 - React Router.
+- React-redux.
 - Redux.
 - Styled Components.
 - Axios.
+- Swagger.
 - Create React App.
 - Visual Studio Code.
 
