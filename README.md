@@ -8,7 +8,7 @@
 
 ***
 
-## Phase 1 : Authentification de l'utilisateur <a name="#Phase1"></a>
+## Phase 1 : Authentification de l'utilisateur (#){#Phase1}
 
 ### CONTEXTE
 
@@ -29,7 +29,7 @@
 
 ***
 
-## Phase 2 - Transactions <a name="#Phase2"></a>
+## Phase 2 - Transactions (#){#Phase2}
 
 ### CONTEXTE
 
