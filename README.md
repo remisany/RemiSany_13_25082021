@@ -8,7 +8,8 @@
 
 ***
 
-## Phase 1 : Authentification de l'utilisateur (#){#Phase1}
+<div id='Phase1' />
+## Phase 1 : Authentification de l'utilisateur
 
 ### CONTEXTE
 
@@ -29,6 +30,7 @@
 
 ***
 
+<div id='Phase2' />
 ## Phase 2 - Transactions (#){#Phase2}
 
 ### CONTEXTE
