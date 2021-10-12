@@ -62,7 +62,7 @@
 - Create React App.
 - Visual Studio Code.
 
-Projet validé le X septembre 2021.
+Projet validé le 23 septembre 2021.
 
 ***
 
@@ -71,10 +71,11 @@ Projet validé le X septembre 2021.
 ### DEPENDENCIES
 
 - [React](https://reactjs.org/) v17.0.2
-- [React-router-dom](https://reactrouter.com/web/guides/quick-start) v17.0.2
+- [React-router-dom](https://reactrouter.com/web/guides/quick-start) v5.2.0
 - [Redux](https://redux.js.org/) v4.1.1
 - [React-Redux](https://react-redux.js.org/) v7.2.4
 - [Styled-components](https://styled-components.com/) v5.3.1
+- [Axios](https://axios-http.com/) v0.23.0
 
 #### Installation Dependencies
 
